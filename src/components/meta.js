@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import ShareImage from '../images/share-image.png'
 
 function Meta({ meta, title }) {
   return (
@@ -11,6 +12,7 @@ function Meta({ meta, title }) {
           site {
             siteMetadata {
               title
+              siteUrl
             }
           }
 
@@ -41,6 +43,8 @@ function Meta({ meta, title }) {
           titleTemplate={`%s | ${data.site.siteMetadata.title}`}
         >
           <html lang="en" />
+          <meta name="og:image" content={ShareImage} />
+          <meta name="og:url" content={data.content.url} />
         </Helmet>
       )}
     />

@@ -15,6 +15,7 @@ module.exports = {
     repository,
     title: 'Gatsby Github',
     unauthenticatedRoutes: [`/privacy-policy/`, `/terms-of-service/`],
+    siteUrl: 'https://gatsby-github.netlify.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
