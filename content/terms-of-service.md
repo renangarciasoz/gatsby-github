@@ -7,7 +7,7 @@ title: Terms of Service
 Last updated: October 18, 2018
 
 Please read these Terms of Service ("Terms", "Terms of Service") carefully
-before using the [https://gatsby-Github.netlify.com][website] website (the "Service")
+before using the [https://gatsby-github.netlify.com][website] website (the "Service")
 operated by Gatsby Github ("us", "we", or "our").
 
 Your access to and use of the Service is conditioned on your acceptance of and
