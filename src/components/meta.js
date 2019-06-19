@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import ShareImage from '../images/share-image.png'
 
 function Meta({ meta, title }) {
   return (
@@ -18,7 +19,6 @@ function Meta({ meta, title }) {
             description
             url
             twitter
-            image
           }
         }
       `}
@@ -39,7 +39,7 @@ function Meta({ meta, title }) {
             },
             {
               name: `og:image`,
-              content: data.content.image,
+              content: ShareImage,
             },
           ].concat(meta)}
           title={title}
