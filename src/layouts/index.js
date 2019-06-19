@@ -52,12 +52,7 @@ class Layout extends Component {
                     <Interface.Consumer>
                       {({ welcome }) => (
                         <Content decoration={true}>
-                          {typeof welcome !== 'boolean' ? null : welcome ===
-                          true ? (
-                            children
-                          ) : (
-                            <Welcome />
-                          )}
+                          {welcome === true ? children : <Welcome />}
                         </Content>
                       )}
                     </Interface.Consumer>
