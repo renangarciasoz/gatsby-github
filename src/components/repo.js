@@ -11,7 +11,7 @@ const Item = styled(Link)(
     textDecoration: `none`,
     width: `100%`,
     maxWidth: `724px`,
-    minHeight: `220px`,
+    minHeight: `226px`,
 
     article: {
       width: `100%`,
