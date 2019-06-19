@@ -1,3 +1,4 @@
-description: "Gatsby Github is an example github application built with modern tech many of us love: React, GraphQL, and more... all powered by Gatsby!"
-url: "https://gatsby-github.netlify.com"
-twitter: "@gatsbyjs"
+description: 'Gatsby Github is an example github application built with modern tech many of us love: React, GraphQL, and more... all powered by Gatsby!'
+url: 'https://gatsby-github.netlify.com'
+twitter: '@gatsbyjs'
+image: '/images/share-image.png'
