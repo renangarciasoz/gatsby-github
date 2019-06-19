@@ -8,24 +8,24 @@ const Item = styled(Link)(
     margin: `5px`,
     display: `flex`,
     textDecoration: `none`,
-    'article': {
+    article: {
       width: `200px`,
-      height: `265px`,
+      height: `258px`,
       fontSize: `12px`,
       display: `flex`,
       flexDirection: `column`,
       alignItems: `center`,
       borderRadius: `3px`,
-      'img': {
+      img: {
         width: '200px',
         height: '200px',
-        margin: 0
-      }
-    }
+        margin: 0,
+      },
+    },
   },
-  ({theme}) => ({
+  ({ theme }) => ({
     color: theme.color,
-    border: `1px solid ${theme.inverted.link}`
+    border: `1px solid ${theme.inverted.link}`,
   })
 )
 

@@ -37,24 +37,39 @@ class Layout extends Component {
             }
           }
         `}
-        render={data => (
-          <Theme.Provider>
-            <Interface.Provider>
-              <Meta meta={meta} title={title} />
-              <Container>
-                <Header siteTitle={data.site.siteMetadata.title} />
-                <Interface.Consumer>
-                  {({ welcome }) => (
-                    <Content>
-                      {welcome === true ? children : <Welcome />}
-                    </Content>
+        render={data => {
+          const useAuthentication = !data.site.siteMetadata.unauthenticatedRoutes.includes(
+            location.pathname
+          )
+
+          return (
+            <Theme.Provider>
+              <Interface.Provider>
+                <Meta meta={meta} title={title} />
+                <Container>
+                  <Header siteTitle={data.site.siteMetadata.title} />
+                  {useAuthentication ? (
+                    <Interface.Consumer>
+                      {({ welcome }) => (
+                        <Content decoration={true}>
+                          {typeof welcome !== 'boolean' ? null : welcome ===
+                          true ? (
+                            children
+                          ) : (
+                            <Welcome />
+                          )}
+                        </Content>
+                      )}
+                    </Interface.Consumer>
+                  ) : (
+                    <Content decoration={true}>{children}</Content>
                   )}
-                </Interface.Consumer>
-                <Footer stripes={location.pathname === `/`} />
-              </Container>
-            </Interface.Provider>
-          </Theme.Provider>
-        )}
+                  <Footer stripes={location.pathname === `/`} />
+                </Container>
+              </Interface.Provider>
+            </Theme.Provider>
+          )
+        }}
       />
     )
   }

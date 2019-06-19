@@ -11,6 +11,7 @@ const Item = styled(Link)(
     textDecoration: `none`,
     width: `100%`,
     maxWidth: `724px`,
+    minHeight: `220px`,
 
     article: {
       width: `100%`,
@@ -20,7 +21,6 @@ const Item = styled(Link)(
       padding: `15px`,
       h1: {
         fontSize: '20px',
-        textDecoration: 'underline',
         marginTop: 0,
       },
       h2: {
@@ -30,7 +30,7 @@ const Item = styled(Link)(
   },
   ({ theme }) => ({
     color: theme.color,
-    border: `1px solid ${theme.inverted.link}`
+    border: `1px solid ${theme.inverted.link}`,
   })
 )
 

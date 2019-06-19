@@ -1,9 +1,9 @@
 let activeEnv =
-process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || 'development'
 
 console.log(`Using environment config: '${activeEnv}'`)
 
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${activeEnv}`,
 })
 
@@ -21,11 +21,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-github',
-        short_name: 'github',
+        name: 'Gatsby Github',
+        short_name: 'Gatsby Github',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#442266',
+        theme_color: '#442266',
         display: 'minimal-ui',
         icon: 'content/images/gatsby-icon.png',
       },

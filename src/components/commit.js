@@ -10,6 +10,7 @@ const Item = styled.a(
     textDecoration: `none`,
     width: `100%`,
     maxWidth: `724px`,
+    minHeight: `95px`,
     article: {
       width: `100%`,
       display: `flex`,
@@ -40,7 +41,7 @@ const Item = styled.a(
   },
   ({ theme }) => ({
     color: theme.color,
-    border: `1px solid ${theme.inverted.link}`
+    border: `1px solid ${theme.inverted.link}`,
   })
 )
 
